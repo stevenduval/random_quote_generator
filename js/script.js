@@ -54,7 +54,7 @@ function generateRGB(){
 
 /*
 This is the brains of the operation, it does the following once the loadQuote button is clicked : 
-  1. Clear the timer information that is stored in the quoteTimer variable and reset that variable back to null
+  1. Clear the timer information that is stored in the quoteTimer variable
   2. Store random quote object from getRandomQuote function into variable named getQuote
   3. Create an empty string and store it into variable called html 
   4. We then place certain information from the getQuote variable into the html variable (checking if citation and year are not empty)
