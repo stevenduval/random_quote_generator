@@ -54,7 +54,7 @@ function generateRGB(){
 
 //function to reset timer that controls when new quote is displayed
 function clearRefreshQuoteTimer() {
-  clearInterval(refresh);
+  clearInterval(quoteTimer);
   quoteTimer = null;
 }
 
