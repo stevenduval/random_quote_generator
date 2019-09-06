@@ -52,15 +52,9 @@ function generateRGB(){
   return 'rgb(' + getRandomNumber(255) + ',' + getRandomNumber(255) + ',' + getRandomNumber(255) + ')'
 }
 
-//function to reset timer that controls when new quote is displayed
-function clearRefreshQuoteTimer() {
-  clearInterval(quoteTimer);
-  quoteTimer = null;
-}
-
 /*
 This is the brains of the operation, it does the following once the loadQuote button is clicked : 
-  1. Run clearRefreshQuoteTimer function to reset the value in quoteTimer
+  1. Clear the timer information that is stored in the quoteTimer variable and reset that variable back to null
   2. Store random quote object from getRandomQuote function into variable named getQuote
   3. Create an empty string and store it into variable called html 
   4. We then place certain information from the getQuote variable into the html variable (checking if citation and year are not empty)
@@ -69,7 +63,7 @@ This is the brains of the operation, it does the following once the loadQuote bu
   7. We then start the timer and store that value in quoteTimer
 */
 function printQuote() {
-  clearRefreshQuoteTimer();
+  clearInterval(quoteTimer);
   var getQuote = getRandomQuote();
   var html = '';
   html += '<p class="quote">' + getQuote.quote + '</p>';
