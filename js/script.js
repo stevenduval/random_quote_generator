@@ -60,12 +60,13 @@ function clearRefreshQuoteTimer() {
 
 /*
 This is the brains of the operation, it does the following once the loadQuote button is clicked : 
-  1. run autoRefresh function to 
-  1. Store random quote object from getRandomQuote function into variable named getQuote
-  2. Create an empty string and store it into variable called html 
-  3. We then place certain information from the getQuote variable into the html variable (checking if citation and year are not empty)
-  4. We then update the background color
-  5. We then push all the information in the html variable to an element with the id of quote-box
+  1. Run clearRefreshQuoteTimer function to reset the value in quoteTimer
+  2. Store random quote object from getRandomQuote function into variable named getQuote
+  3. Create an empty string and store it into variable called html 
+  4. We then place certain information from the getQuote variable into the html variable (checking if citation and year are not empty)
+  5. We then update the background color
+  6. We then push all the information in the html variable to an element with the id of quote-box
+  7. We then start the timer and store that value in quoteTimer
 */
 function printQuote() {
   clearRefreshQuoteTimer();
