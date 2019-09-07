@@ -15,7 +15,7 @@ var quotes = [
   },
   {
     quote: 'I have had all the disadvantages required for success.',
-    source: 'Larry Ellison',
+    source: 'Larry Ellison'
   },
   {
     quote: 'Most people overestimate what they can do in one year and underestimate what they can do in ten years.',
@@ -68,9 +68,9 @@ function printQuote() {
   var html = '';
   html += '<p class="quote">' + getQuote.quote + '</p>';
   html += '<p class="source">' + getQuote.source;
-  if (getQuote.citation != undefined) { html += '<span class="citation">' + getQuote.citation + '</span>';}
-  if (getQuote.year != undefined) { html += '<span class="year">' + getQuote.year + '</span>';}
-  if (getQuote.tags != undefined) { html += '</p><p class="tags"> tags: ' + getQuote.tags};
+  if (getQuote.citation) { html += '<span class="citation">' + getQuote.citation + '</span>';}
+  if (getQuote.year) { html += '<span class="year">' + getQuote.year + '</span>';}
+  if (getQuote.tags) { html += '</p><p class="tags"> tags: ' + getQuote.tags};
   html += '</p>'
   document.body.style.backgroundColor = generateRGB();
   document.getElementById('quote-box').innerHTML = html;
